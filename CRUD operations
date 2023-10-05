@@ -1,1 +1,30 @@
+CREATE TABLE Employee(EmployeeId int PRIMARY KEY,
+FirstName Varchar(50),
+LastName Varchar(50),
+Email Varchar(100),
+PhoneNumber Varchar(20),
+HireDate Date,
+Salary Decimal(10,2),
+DepartmentID Int
+);
+
+INSERT INTO Employee(EmployeeId,FirstName,LastName,Email,PhoneNumber,HireDate,Salary,DepartmentId) VALUES (1,'Linda','Josia','Josia@gmail.com','545-543-3244','2023-01-15',5000.0,101);
+
+SELECT * FROM Employee;
+
+UPDATE EMPLOYEE SET FirstName='Linsa' WHERE EmployeeId=1;
+
+UPDATE Employee
+SET FirstName = 'UpdatedFirstName',
+    LastName = 'UpdatedLastName',
+    Email = 'updatedemail@example.com',
+    PhoneNumber = '555-555-5555',
+    HireDate = '2023-04-01',
+    Salary = 70000.00,
+    DepartmentID = 103
+WHERE EmployeeID = 1;
+
+DELETE FROM Employee;
+DELETE FROM Employee WHERE FirstName='Linsa';
+
 
