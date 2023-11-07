@@ -1,0 +1,9 @@
+SELECT SUM(total_price) AS Total_Revenue FROM pizza_sales;
+SELECT (SUM(total_price) / COUNT(DISTINCT order_id)) AS Avg_order_Value FROM pizza_sales;
+SELECT SUM(quantity) AS Total_pizza_sold FROM pizza_sales;
+SELECT COUNT(DISTINCT order_id) AS Total_Orders FROM pizza_sales;
+SELECT pizza_category, SUM(quantity) as Total_Quantity_Sold
+FROM pizza_sales
+WHERE MONTH(order_date) = 2
+GROUP BY pizza_category
+ORDER BY Total_Quantity_Sold DESC;
